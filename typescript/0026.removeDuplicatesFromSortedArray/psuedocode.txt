@@ -1,0 +1,18 @@
+function removeDuplicates(nums):
+    if nums is empty:
+        return 0
+    
+    // Initialize the write_index to 1 (since the first element is always unique)
+    j = 1
+    
+    // Iterate over the array starting from the second element
+    for i from 1 to length(nums) - 1:
+        // If the current element is different from the previous element
+        if nums[i] != nums[i - 1]:
+            // Write the current element to the write_index position
+            nums[j] = nums[i]
+            // Increment the write_index
+            j += 1
+    
+    // Return the number of unique elements
+    return j
